@@ -31,8 +31,6 @@ Notarías, entidades bancarias y juzgados exigen este documento para validar la 
 
 Este certificado es emitido únicamente por la Superintendencia de Notariado y Registro de Colombia. En Montería, la gestión la realiza directamente la Oficina de Registro de Instrumentos Públicos de Montería, que está adscrita a la Superintendencia.
 
-No se debe confiar en intermediarios no autorizados ni páginas web no oficiales para este trámite, ya que podrías terminar con un documento falso o con datos erróneos.
-
 ## Cómo solicitar el certificado en Montería paso a paso
 
 ### Solicitud en línea a través de la Superintendencia de Notariado y Registro

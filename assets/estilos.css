@@ -58,6 +58,35 @@ header h1 {
   font-size: 2.2em;
   letter-spacing: 2px;
 }
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5em;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-shadow: 0 2px 12px #0003, 0 1px 0 #2b5876;
+  transition: color 0.2s, text-shadow 0.2s, font-size 0.2s;
+  display: inline-block;
+  padding: 0.1em 0.3em;
+  border-radius: 8px;
+}
+header h1 a:hover {
+  color: #ffe082;
+  background: #2b5876;
+  text-shadow: 0 4px 24px #0005;
+}
+@media (max-width: 700px) {
+  header h1 a {
+    font-size: 1.5em;
+    padding: 0.08em 0.2em;
+  }
+}
+@media (max-width: 400px) {
+  header h1 a {
+    font-size: 1.1em;
+    padding: 0.06em 0.1em;
+  }
+}
 header p {
   margin: 0;
   font-size: 1.1em;
@@ -133,6 +162,11 @@ footer {
   color: #2b5876;
   font-weight: bold;
 }
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -141,6 +175,22 @@ table {
   box-shadow: 0 2px 12px #0001;
   border-radius: 8px;
   overflow: hidden;
+  min-width: 400px;
+}
+@media (max-width: 700px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.97em;
+    min-width: 320px;
+  }
+  th,
+  td {
+    padding: 0.7em 0.6em;
+    white-space: nowrap;
+  }
 }
 th,
 td {
@@ -190,4 +240,8 @@ ol li::marker {
 ul li:hover,
 ol li:hover {
   background: #f1f4fa;
+}
+.main-nav a:hover {
+  background: #ffe082;
+  color: #2b5876;
 }
