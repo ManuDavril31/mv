@@ -10,7 +10,7 @@ card_description: "Solicita el certificado de tradicion y libertad en Montería"
 card_image: /assets/posts/imgs/certificado-de-tradicion-y-libertad-en-monteria.jpg
 ---
 
-# 📄 Generar el Certificado de Tradición y Libertad Montería
+## 📄 Generar el Certificado de Tradición y Libertad Montería
 
 <div class="cta-certificado">
   <div class="cta-certificado__info">
