@@ -12,8 +12,8 @@ layout: default
       {% else %}
         <img src="https://cdn-icons-png.flaticon.com/512/9402/9402212.png" alt="{{ post.title }}">
       {% endif %}
-      <div class="nombre">{{ post.title }}</div>
-      <div class="descripcion">{{ post.excerpt | strip_html | truncate: 80 }}</div>
+      <div class="nombre">{{ post.card_title | default: post.title }}</div>
+      <div class="descripcion">{{ post.card_description | default: post.excerpt | strip_html | truncate: 80 }}</div>
       {% if post.precio %}
         <div class="precio">€ {{ post.precio }}</div>
       {% endif %}
