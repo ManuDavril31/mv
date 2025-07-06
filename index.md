@@ -7,7 +7,9 @@ layout: default
   {% for post in site.posts %}
     <div class="producto-card">
       {% if post.descuento %}<span class="descuento">-{{ post.descuento }}%</span>{% endif %}
-      {% if post.imagen %}
+      {% if post.card_image %}
+        <img src="{{ post.card_image }}" alt="{{ post.title }}">
+      {% elsif post.imagen %}
         <img src="{{ post.imagen }}" alt="{{ post.title }}">
       {% else %}
         <img src="https://cdn-icons-png.flaticon.com/512/9402/9402212.png" alt="{{ post.title }}">

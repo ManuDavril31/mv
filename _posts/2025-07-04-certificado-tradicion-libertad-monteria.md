@@ -1,21 +1,24 @@
 ---
 layout: post
-title: "Solicitar Certificado de Tradición y Libertad Montería"
+title: "Solicitar Certificado de Tradición y Libertad en Montería"
 date: 2025-07-04
 categories: guia, certificados, monteria
 meta: "Aprende cómo obtener el certificado de tradición y libertad Montería paso a paso en 2025. Guía oficial con costos, requisitos, interpretación y más."
 permalink: /certificado-tradicion-libertad-monteria/
 card_title: "Certificado de tradición y libertad | Montería"
 card_description: "Solicita el certificado de tradicion y libertad en Montería"
+card_image: /assets/posts/imgs/certificado-de-tradicion-y-libertad-en-monteria.jpg
 ---
 
-# 📄 Guía Completa y Actualizada 2025 del Certificado de Tradición y Libertad Montería
+# 📄 Generar el Certificado de Tradición y Libertad Montería
 
 ## ¿Qué es el Certificado de Tradición y Libertad en Montería?
 
 El certificado de tradición y libertad Montería es un documento oficial expedido por la Superintendencia de Notariado y Registro, que contiene el historial jurídico de un inmueble ubicado en esta ciudad del departamento de Córdoba, Colombia. Este certificado incluye datos como los propietarios anteriores y actuales, gravámenes (hipotecas, embargos), limitaciones al dominio, y cualquier anotación jurídica que afecte al predio.
 
 En términos simples, es como la hoja de vida legal del inmueble. Si estás pensando en comprar, vender, hipotecar o realizar algún proceso legal con una propiedad en Montería, este certificado es tu primer paso.
+
+![certificado de tradicion y libertad en monteria](/assets/posts/imgs/certificado-de-tradicion-y-libertad-en-monteria.jpg)
 
 ## Importancia del certificado para propietarios e inversores
 
