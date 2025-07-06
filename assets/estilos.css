@@ -63,7 +63,7 @@ header p {
   opacity: 0.85;
 }
 main {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 2rem auto 2rem auto;
   background: #fff;
   border-radius: 12px;
@@ -130,4 +130,33 @@ footer {
   margin: 0.5em 0 0.2em 0;
   color: #2b5876;
   font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: #f9f9fb;
+  box-shadow: 0 2px 12px #0001;
+  border-radius: 8px;
+  overflow: hidden;
+}
+th,
+td {
+  padding: 0.9em 1em;
+  text-align: left;
+}
+th {
+  background: #2b5876;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #4e4376;
+}
+td {
+  border-bottom: 1px solid #e0e0e0;
+}
+tr:last-child td {
+  border-bottom: none;
+}
+tr:nth-child(even) td {
+  background: #f1f4fa;
 }
