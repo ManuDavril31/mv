@@ -247,7 +247,7 @@ ol li:hover:not(.main-nav li):not(.main-nav ol li) {
 }
 main img,
 .post-content img {
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
   display: block;
   margin: 1.2em auto;
