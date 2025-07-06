@@ -168,5 +168,23 @@ Al realizar trámites notariales, legales o bancarios en Montería, no subestime
 - Verifica que el certificado esté actualizado antes de cualquier negocio.
 - Consulta con un abogado si notas alguna irregularidad en el documento.
 
+<div class="cta-certificado">
+  <div class="cta-certificado__info">
+    <h2>¿Necesitas tu <span>Certificado de Tradición y Libertad</span> en Montería?</h2>
+    <p>¡Te ayudamos a obtenerlo rápido, seguro y 100% legal!<br>
+    <strong>Atención personalizada por WhatsApp</strong></p>
+    <ul>
+      <li>Generado directamente de la página de la <a href="https://certificados.supernotariado.gov.co/certificado" target="_blank">Superintendencia de Notariado y Registro</a>. </li>
+      <li>Entrega en minutos por correo o WhatsApp</li>
+      <li>Pago fácil: Nequi o Bancolombia</li>
+      <li>Asesoría y verificación de validez</li>
+    </ul>
+    <a class="cta-certificado__boton" href="https://api.whatsapp.com/send?phone=+573204403165&text=monteriavende:%20Hola,%20ay%C3%BAdame%20a%20descargar%20un%20certificado%20de%20tradicion%20y%20libertad." target="_blank" rel="noopener">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="height:1.5em;vertical-align:middle;margin-right:0.5em;">Solicitar por WhatsApp <span style="font-size:0.9em;">3204403165</span>
+    </a>
+    <div class="cta-certificado__mini">Responde un asesor en minutos</div>
+  </div>
+</div>
+
 🔗 **Fuente recomendada:**
 Puedes consultar más información oficial en la página de la Superintendencia de Notariado y Registro.
