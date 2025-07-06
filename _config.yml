@@ -1,7 +1,6 @@
 title: MONTERIAVENDE
 email: tu-email@ejemplo.com
-description: >-
-  Sitio web estático generado con Jekyll para MONTERIAVENDE.
+description: ""
 baseurl: "" # el subdirectorio del sitio, por ejemplo /blog
 url: "" # la URL base del sitio
 
