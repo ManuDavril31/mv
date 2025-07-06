@@ -2,8 +2,37 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title }}</title>
+    <title>
+      {% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{
+      site.title }}{% endif %}
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="{% if page.meta %}{{ page.meta | strip_newlines }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }} - Compra y venta en Montería{% endif %}"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+    />
+    <meta
+      property="og:description"
+      content="{% if page.meta %}{{ page.meta | strip_newlines }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }} - Compra y venta en Montería{% endif %}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% if page.meta %}{{ page.meta | strip_newlines }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }} - Compra y venta en Montería{% endif %}"
+    />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
     <link rel="stylesheet" href="{{ "/assets/estilos.css" | relative_url }}">
     <style>
       .main-nav {
@@ -277,7 +306,12 @@
     </script>
     <main>{{ content }}</main>
     <footer>
-      <p>&copy; 2025 MONTERIAVENDE</p>
+      <p>
+        &copy; 2025 MONTERIAVENDE &mdash;
+        <a href="/sitemap/" style="color: #2b5876; text-decoration: underline"
+          >Mapa del sitio</a
+        >
+      </p>
     </footer>
   </body>
 </html>

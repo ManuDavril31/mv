@@ -1,0 +1,44 @@
+<!--
+  Plantilla de llamada a la acción reutilizable para Jekyll/Liquid
+  Parámetros personalizables:
+    - titulo: Título principal (puede incluir <span> para resaltar)
+    - subtitulo: Subtítulo o frase de refuerzo
+    - items: Lista de beneficios o características (array o string separado por comas)
+    - link: URL del botón (ej: WhatsApp, formulario, etc)
+    - texto_boton: Texto del botón
+    - icono: URL del icono (opcional)
+    - mini: Texto pequeño bajo el botón (opcional)
+    - clase_fondo: Clase CSS para fondo (opcional)
+    - clase_boton: Clase CSS para botón (opcional)
+    - clase_texto: Clase CSS para color de texto (opcional)
+-->
+
+<div
+  class="cta-plantilla {% if include.clase_fondo %}{{ include.clase_fondo }}{% endif %} {% if include.clase_texto %}{{ include.clase_texto }}{% endif %}"
+>
+  <div class="cta-plantilla__info">
+    <h2>{{ include.titulo }}</h2>
+    {% if include.subtitulo %}
+    <p>{{ include.subtitulo }}</p>
+    {% endif %} {% if include.items %}
+    <ul>
+      {% assign items_array = include.items | split: ',' %} {% for item in
+      items_array %}
+      <li>{{ item | strip }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <a
+      class="cta-plantilla__boton {% if include.clase_boton %}{{ include.clase_boton }}{% endif %}"
+      href="{{ include.link }}"
+      target="_blank"
+      rel="noopener"
+    >
+      {% if include.icono %}<img src="{{ include.icono }}" alt="icono" />{%
+      endif %}{{ include.texto_boton }}
+    </a>
+    {% if include.mini %}
+    <div class="cta-plantilla__mini">{{ include.mini }}</div>
+    {% endif %}
+  </div>
+</div>
