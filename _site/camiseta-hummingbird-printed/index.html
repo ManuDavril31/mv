@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Camiseta Hummingbird Printed</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/estilos.css">
+    <style>
+      .main-nav {
+        margin: 1.2em 0 0.5em 0;
+      }
+      .main-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2.5em;
+      }
+      .main-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.08em;
+        letter-spacing: 1px;
+        padding: 0.2em 0.7em;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .main-nav a:hover {
+        background: #fff2;
+        color: #ffe082;
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.getElementById("main-header");
+        if (header) {
+          if (window.scrollY > 30) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header id="main-header">
+      <h1><a href="/">MONTERIAVENDE</a></h1>
+      <nav class="main-nav" id="main-nav">
+        <div class="nav-toggle-wrap">
+          <button
+            class="nav-toggle"
+            aria-label="Abrir menú"
+            onclick="document.querySelector('.main-nav ul').classList.toggle('open')"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/#productos">Productos</a></li>
+          <li><a href="/#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <p>Sitio web estático generado con Jekyll para MONTERIAVENDE.</p>
+    </header>
+    <style>
+      .nav-toggle-wrap {
+        display: none;
+      }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+        z-index: 20;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      @media (max-width: 600px) {
+        .nav-toggle-wrap {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        .nav-toggle {
+          display: flex;
+          margin: 0 auto;
+        }
+        .main-nav {
+          position: relative;
+        }
+        .main-nav ul {
+          display: none;
+          flex-direction: column;
+          gap: 0.7em;
+          background: #2b5876;
+          position: absolute;
+          top: 48px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90vw;
+          max-width: 340px;
+          padding: 1.2em 0 1.2em 0;
+          box-shadow: 0 4px 24px #0003;
+          z-index: 10;
+        }
+        .main-nav ul.open {
+          display: flex;
+        }
+      }
+    </style>
+    <style>
+      #main-header {
+        background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
+        transition: box-shadow 0.2s;
+      }
+      #main-nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
+        transition: box-shadow 0.2s;
+      }
+      #main-nav.sticky {
+        box-shadow: 0 4px 24px #0003;
+      }
+      .header-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5em;
+        transition: justify-content 0.3s;
+      }
+      .header-title {
+        margin: 0 1.5em 0 0;
+        font-size: 2.2em;
+        letter-spacing: 2px;
+        transition: font-size 0.3s, margin 0.3s;
+      }
+      .main-nav {
+        margin: 1.2em 0 0.5em 0;
+      }
+      .main-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2.5em;
+      }
+      .main-nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1.08em;
+        letter-spacing: 1px;
+        padding: 0.2em 0.7em;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .main-nav a:hover {
+        background: #fff2;
+        color: #ffe082;
+      }
+      .nav-toggle-wrap {
+        display: none;
+      }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 38px;
+        height: 38px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0 auto;
+        z-index: 20;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 26px;
+        height: 3px;
+        margin: 4px 0;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+      @media (max-width: 600px) {
+        .nav-toggle-wrap {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        .nav-toggle {
+          display: flex;
+          margin: 0 auto;
+        }
+        .main-nav {
+          position: relative;
+        }
+        .main-nav ul {
+          display: none;
+          flex-direction: column;
+          gap: 0.7em;
+          background: #2b5876;
+          position: absolute;
+          top: 48px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90vw;
+          max-width: 340px;
+          padding: 1.2em 0 1.2em 0;
+          box-shadow: 0 4px 24px #0003;
+          z-index: 10;
+        }
+        .main-nav ul.open {
+          display: flex;
+        }
+      }
+      @media (min-width: 700px) {
+        .header-flex.sticky {
+          justify-content: space-between;
+        }
+        #main-header.sticky .header-title {
+          font-size: 1.3em;
+          margin: 0 0 0 1.5em;
+        }
+        #main-header.sticky .main-nav {
+          margin-right: 2em;
+        }
+      }
+      @media (max-width: 600px) {
+        .header-flex {
+          flex-direction: column;
+          gap: 0.5em;
+        }
+        .header-flex.sticky {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        #main-header.sticky .header-title {
+          font-size: 1.1em;
+          margin: 0 0 0 0.5em;
+        }
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var nav = document.getElementById("main-nav");
+        if (nav) {
+          if (window.scrollY > 30) {
+            nav.classList.add("sticky");
+          } else {
+            nav.classList.remove("sticky");
+          }
+        }
+      });
+    </script>
+    <main><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Camiseta Hummingbird Printed</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-07-04T00:00:00-05:00" itemprop="datePublished">Jul 4, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Camiseta estampada con diseño de colibrí. Disponible en varias tallas y colores.</p>
+
+  </div><a class="u-url" href="/camiseta-hummingbird-printed/" hidden></a>
+</article>
+</main>
+    <footer>
+      <p>&copy; 2025 MONTERIAVENDE</p>
+    </footer>
+  </body>
+</html>

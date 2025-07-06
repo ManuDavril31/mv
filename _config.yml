@@ -1,0 +1,17 @@
+title: MONTERIAVENDE
+email: tu-email@ejemplo.com
+description: >-
+  Sitio web estático generado con Jekyll para MONTERIAVENDE.
+baseurl: "" # el subdirectorio del sitio, por ejemplo /blog
+url: "" # la URL base del sitio
+
+# Permalinks personalizados para páginas y posts
+permalink: /:title/
+collections:
+  posts:
+    permalink: /:title/
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
