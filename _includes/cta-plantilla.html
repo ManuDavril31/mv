@@ -1,0 +1,45 @@
+<!--
+  Plantilla de llamada a la acción reutilizable para Jekyll/Liquid
+  Parámetros personalizables:
+    - titulo: Título principal (puede incluir <span> para resaltar)
+    - subtitulo: Subtítulo o frase de refuerzo
+    - items: Lista de beneficios o características (array)
+    - link: URL del botón (ej: WhatsApp, formulario, etc)
+    - texto_boton: Texto del botón
+    - icono: URL del icono (opcional)
+    - mini: Texto pequeño bajo el botón (opcional)
+    - color_fondo: Color o gradiente de fondo (opcional)
+    - color_boton: Color o gradiente del botón (opcional)
+    - color_texto: Color del texto (opcional)
+-->
+
+<div
+  class="cta-plantilla"
+  style="background:{{ include.color_fondo | default: 'linear-gradient(90deg, #e3ecfa 0%, #d0e2ff 100%)' }}; color:{{ include.color_texto | default: '#222' }};"
+>
+  <div class="cta-plantilla__info">
+    <h2>{{ include.titulo }}</h2>
+    {% if include.subtitulo %}
+    <p>{{ include.subtitulo }}</p>
+    {% endif %} {% if include.items %}
+    <ul>
+      {% for item in include.items %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    <a
+      class="cta-plantilla__boton"
+      href="{{ include.link }}"
+      target="_blank"
+      rel="noopener"
+      style="background:{{ include.color_boton | default: 'linear-gradient(90deg, #2b5876 0%, #4e4376 100%)' }};color:#fff;"
+    >
+      {% if include.icono %}<img src="{{ include.icono }}" alt="icono" />{%
+      endif %}{{ include.texto_boton }}
+    </a>
+    {% if include.mini %}
+    <div class="cta-plantilla__mini">{{ include.mini }}</div>
+    {% endif %}
+  </div>
+</div>
