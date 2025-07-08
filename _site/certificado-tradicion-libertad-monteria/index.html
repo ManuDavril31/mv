@@ -548,6 +548,16 @@ Puedes consultar más información oficial en la página de la Superintendencia 
   </div><a class="u-url" href="/certificado-tradicion-libertad-monteria/" hidden></a>
 </article>
 </main>
+
+    <!-- Botón Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      aria-label="Volver al inicio"
+    >
+      ↑
+    </button>
+
     <footer>
       <p>
         &copy; 2025 MONTERIAVENDE &mdash;
@@ -556,5 +566,28 @@ Puedes consultar más información oficial en la página de la Superintendencia 
         >
       </p>
     </footer>
+
+    <!-- JavaScript para Scroll to Top -->
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Mostrar/ocultar botón según scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // Función de scroll suave al hacer clic
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

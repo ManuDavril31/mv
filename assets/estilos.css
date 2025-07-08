@@ -444,3 +444,65 @@ main h1,
     padding: 0.7em 1em;
   }
 }
+
+/* Botón Scroll to Top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(43, 88, 118, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #1a3f54 0%, #3d3660 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(43, 88, 118, 0.4);
+}
+
+.scroll-to-top:active {
+  transform: translateY(0);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+  }
+}

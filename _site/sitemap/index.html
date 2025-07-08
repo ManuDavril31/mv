@@ -332,6 +332,16 @@
 
 <p style="margin-top:2em;color:#888;font-size:0.98em;">¿No encuentras lo que buscas? Usa el buscador o revisa las categorías principales.</p>
 </main>
+
+    <!-- Botón Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      aria-label="Volver al inicio"
+    >
+      ↑
+    </button>
+
     <footer>
       <p>
         &copy; 2025 MONTERIAVENDE &mdash;
@@ -340,5 +350,28 @@
         >
       </p>
     </footer>
+
+    <!-- JavaScript para Scroll to Top -->
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Mostrar/ocultar botón según scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // Función de scroll suave al hacer clic
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

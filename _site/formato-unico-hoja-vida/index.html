@@ -613,6 +613,16 @@ En la web oficial de la Función Pública 👉 <a href="https://www.funcionpubli
   </div><a class="u-url" href="/formato-unico-hoja-vida/" hidden></a>
 </article>
 </main>
+
+    <!-- Botón Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      aria-label="Volver al inicio"
+    >
+      ↑
+    </button>
+
     <footer>
       <p>
         &copy; 2025 MONTERIAVENDE &mdash;
@@ -621,5 +631,28 @@ En la web oficial de la Función Pública 👉 <a href="https://www.funcionpubli
         >
       </p>
     </footer>
+
+    <!-- JavaScript para Scroll to Top -->
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Mostrar/ocultar botón según scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // Función de scroll suave al hacer clic
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
