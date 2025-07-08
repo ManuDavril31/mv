@@ -15,20 +15,7 @@ automáticamente el tipo de página y genera la navegación apropiada {% endcomm
       <li><span class="breadcrumb-separator">›</span></li>
 
       {% if page.layout == 'post' %}
-      <!-- Para posts, agregar categoría si existe -->
-      {% if page.categories and page.categories.size > 0 %} {% assign
-      main_category = page.categories[0] %} {% assign category_display =
-      site.category_names[main_category] | default: main_category | capitalize
-      %}
-      <li>
-        <a href="{{ site.baseurl }}/categorias/{{ main_category | slugify }}/">
-          {{ category_display }}
-        </a>
-      </li>
-      <li><span class="breadcrumb-separator">›</span></li>
-      {% endif %}
-
-      <!-- Título del post actual -->
+      <!-- Para posts, solo mostrar el título del post -->
       <li>
         <span class="current">{{ page.title }}</span>
       </li>
