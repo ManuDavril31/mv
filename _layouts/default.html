@@ -90,6 +90,7 @@
         <ul>
           <li><a href="{{ site.baseurl }}/">Inicio</a></li>
           <li><a href="{{ site.baseurl }}/#productos">Productos</a></li>
+          <li><a href="{{ site.baseurl }}/acerca/">Acerca</a></li>
           <li><a href="{{ site.baseurl }}/#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -304,6 +305,9 @@
         }
       });
     </script>
+
+    {% unless page.url == '/' %} {% include breadcrumbs.html %} {% endunless %}
+
     <main>{{ content }}</main>
 
     <!-- Botón Scroll to Top -->

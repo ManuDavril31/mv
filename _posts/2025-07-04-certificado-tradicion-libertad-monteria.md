@@ -2,7 +2,7 @@
 layout: post
 title: "Solicitar Certificado de Tradición y Libertad en Montería"
 date: 2025-07-04
-categories: guia, certificados, monteria
+categories: [guia, certificados, monteria]
 meta: "Aprende cómo obtener el certificado de tradición y libertad Montería paso a paso en 2025. Guía oficial con costos, requisitos, interpretación y más."
 permalink: /certificado-tradicion-libertad-monteria/
 card_title: "Certificado de tradición y libertad | Montería"
