@@ -59,12 +59,9 @@ header h1 {
   letter-spacing: clamp(0px, 0.08vw, 2px);
   word-break: break-word;
   overflow-wrap: break-word;
-  white-space: nowrap;
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 header h1 a {
   color: #fff;
@@ -79,12 +76,9 @@ header h1 a {
   border-radius: 8px;
   word-break: break-word;
   overflow-wrap: break-word;
-  white-space: nowrap;
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 header h1 a:hover {
   color: #ffe082;
