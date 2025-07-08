@@ -90,7 +90,15 @@ categories: [categoria1, categoria2, categoria3]
 ### Layout `_layouts/default.html`
 
 - Incluye automáticamente las migas de pan en todas las páginas (excepto inicio)
-- Condición: `{% unless page.url == '/' %}`
+- Condición:
+
+```liquid
+{% raw %}
+{% unless page.url == '/' %}
+  <!-- Código de las migas de pan -->
+{% endunless %}
+{% endraw %}
+```
 
 ## Personalización
 
