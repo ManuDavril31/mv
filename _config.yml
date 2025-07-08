@@ -14,3 +14,19 @@ collections:
 theme: minima
 plugins:
   - jekyll-feed
+
+# Configuración de migas de pan
+breadcrumbs:
+  enabled: true
+  home_text: "Inicio"
+  separator: "›"
+
+# Configuración de categorías para migas de pan
+category_names:
+  guia: "Guías"
+  certificados: "Certificados"
+  monteria: "Montería"
+  productos: "Productos"
+  servicios: "Servicios"
+  formato: "Formatos"
+  "hoja de vida": "Hoja de Vida"

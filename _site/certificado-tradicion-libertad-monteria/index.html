@@ -89,6 +89,7 @@
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/#productos">Productos</a></li>
+          <li><a href="/acerca/">Acerca</a></li>
           <li><a href="/#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -303,17 +304,45 @@
         }
       });
     </script>
-    <main><article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
+       
+
+<div class="breadcrumbs">
+  <nav aria-label="Migas de pan">
+    <ol>
+      <!-- Enlace a inicio -->
+      <li>
+        <a href="/" class="breadcrumb-home">Inicio</a>
+      </li>
+
+      
+      <li><span class="breadcrumb-separator">›</span></li>
+
+      
+      <!-- Para posts, solo mostrar el título del post -->
+      <li>
+        <span class="current">Solicitar Certificado de Tradición y Libertad en Montería</span>
+      </li>
+
+       
+    </ol>
+  </nav>
+</div>
+ 
+
+    <main><article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Solicitar Certificado de Tradición y Libertad en Montería</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2025-07-04T00:00:00-05:00" itemprop="datePublished">Jul 4, 2025
-      </time></p>
+    <h1 class="post-title p-name" itemprop="name headline">
+      Solicitar Certificado de Tradición y Libertad en Montería
+    </h1>
+    <p class="post-meta">Categoría:<span class="post-category">Guia</span>,<span class="post-category">Certificados</span>,<span class="post-category">Monteria</span></p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    <h2 id="-generar-el-certificado-de-tradición-y-libertad-montería">📄 Generar el Certificado de Tradición y Libertad Montería</h2>
+  <div class="post-content e-content" itemprop="articleBody"><h2 id="-generar-el-certificado-de-tradición-y-libertad-montería">📄 Generar el Certificado de Tradición y Libertad Montería</h2>
 
 <div class="cta-certificado">
   <div class="cta-certificado__info">
@@ -544,10 +573,76 @@
 
 <p>🔗 <strong>Fuente recomendada:</strong>
 Puedes consultar más información oficial en la página de la Superintendencia de Notariado y Registro.</p>
-
-  </div><a class="u-url" href="/certificado-tradicion-libertad-monteria/" hidden></a>
+</div><a class="u-url" href="/certificado-tradicion-libertad-monteria/" hidden></a>
 </article>
+
+<style>
+  .post-header {
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 1.5rem;
+  }
+
+  .post-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #2b5876;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+  }
+
+  .post-meta {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  .post-category {
+    background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
+    color: #fff;
+    padding: 0.2em 0.6em;
+    border-radius: 12px;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .post-content {
+    line-height: 1.7;
+    font-size: 1.1em;
+  }
+
+  @media (max-width: 768px) {
+    .post-title {
+      font-size: 1.8em;
+    }
+
+    .post-meta {
+      flex-direction: column;
+      gap: 0.3em;
+    }
+
+    .post-content {
+      font-size: 1.05em;
+    }
+  }
+</style>
 </main>
+
+    <!-- Botón Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      aria-label="Volver al inicio"
+    >
+      ↑
+    </button>
+
     <footer>
       <p>
         &copy; 2025 MONTERIAVENDE &mdash;
@@ -556,5 +651,28 @@ Puedes consultar más información oficial en la página de la Superintendencia 
         >
       </p>
     </footer>
+
+    <!-- JavaScript para Scroll to Top -->
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Mostrar/ocultar botón según scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // Función de scroll suave al hacer clic
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

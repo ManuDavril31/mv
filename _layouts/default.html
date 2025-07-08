@@ -90,6 +90,7 @@
         <ul>
           <li><a href="{{ site.baseurl }}/">Inicio</a></li>
           <li><a href="{{ site.baseurl }}/#productos">Productos</a></li>
+          <li><a href="{{ site.baseurl }}/acerca/">Acerca</a></li>
           <li><a href="{{ site.baseurl }}/#contacto">Contacto</a></li>
         </ul>
       </nav>
@@ -304,7 +305,20 @@
         }
       });
     </script>
+
+    {% unless page.url == '/' %} {% include breadcrumbs.html %} {% endunless %}
+
     <main>{{ content }}</main>
+
+    <!-- Botón Scroll to Top -->
+    <button
+      class="scroll-to-top"
+      id="scrollToTop"
+      aria-label="Volver al inicio"
+    >
+      ↑
+    </button>
+
     <footer>
       <p>
         &copy; 2025 MONTERIAVENDE &mdash;
@@ -313,5 +327,28 @@
         >
       </p>
     </footer>
+
+    <!-- JavaScript para Scroll to Top -->
+    <script>
+      // Scroll to Top functionality
+      const scrollToTopBtn = document.getElementById("scrollToTop");
+
+      // Mostrar/ocultar botón según scroll
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // Función de scroll suave al hacer clic
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>
