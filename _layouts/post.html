@@ -12,22 +12,15 @@ layout: default
       {{ page.title | escape }}
     </h1>
     <p class="post-meta">
-      <time
-        class="dt-published"
-        datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished"
-      >
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
-        -%} {{ page.date | date: "%d de %B de %Y" }}
-      </time>
-      {%- if page.author -%} •
+      {%- if page.author -%}
       <span itemprop="author" itemscope itemtype="http://schema.org/Person"
         ><span class="p-author h-card" itemprop="name"
           >{{ page.author }}</span
         ></span
       >
-      {%- endif -%} {%- if page.categories and page.categories.size > 0 -%} •
-      Categoría: {%- for category in page.categories -%}
+      {%- endif -%} {%- if page.categories and page.categories.size > 0 -%} {%-
+      if page.author -%} • {%- endif -%} Categoría: {%- for category in
+      page.categories -%}
       <span class="post-category">{{ category | capitalize }}</span>
       {%- unless forloop.last -%}, {%- endunless -%} {%- endfor -%} {%- endif
       -%}

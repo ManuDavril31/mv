@@ -799,3 +799,10 @@ main h1 {
     border-radius: 6px !important;
   }
 }
+
+/* Ocultar fechas en posts */
+.post-meta time,
+.dt-published,
+time.dt-published {
+  display: none !important;
+}
