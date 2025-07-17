@@ -10,16 +10,18 @@ permalink: /sitemap.xml
     <priority>1.0</priority>
   </url>
   {% for page in site.pages %}
-    {% if page.url != "/404.html" and page.sitemap != false %}
+    {% if page.url != "/404.html" and page.sitemap != false and page.noindex != true and page.robots != "noindex, follow" and page.robots != "noindex, nofollow" %}
+      {% unless page.url contains '/assets/' %}
     <url>
       <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
+      {% endunless %}
     {% endif %}
   {% endfor %}
   {% for post in site.posts %}
-    {% if post.sitemap != false %}
+    {% if post.sitemap != false and post.noindex != true and post.robots != "noindex, follow" and post.robots != "noindex, nofollow" %}
     <url>
       <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>

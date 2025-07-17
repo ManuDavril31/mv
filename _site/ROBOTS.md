@@ -345,9 +345,38 @@ curl -s http://127.0.0.1:4000/URL/ | grep "robots"
 2. **Prioridad:** `robots:` > `noindex:` > por defecto
 3. **Flexibilidad:** Puedes usar cualquier valor válido de robots
 4. **Mantenimiento:** Solo necesitas ajustar casos específicos
+5. **Sitemap automático:** Las páginas con `noindex` se excluyen automáticamente del sitemap
+
+## 🗺️ **Integración con Sitemap**
+
+El sitemap (`sitemap.xml`) está sincronizado con el sistema de robots:
+
+### **✅ Páginas incluidas en sitemap:**
+
+- Páginas con `index, follow` (por defecto)
+- Páginas con `robots: "index, nofollow"`
+- Páginas con `robots: "index, follow, ..."`
+
+### **❌ Páginas excluidas del sitemap:**
+
+- Páginas con `noindex: true`
+- Páginas con `robots: "noindex, follow"`
+- Páginas con `robots: "noindex, nofollow"`
+- Páginas con `sitemap: false`
+- Página 404
+
+### **Verificación:**
+
+```bash
+# Ver el sitemap generado
+curl -s http://127.0.0.1:4000/sitemap.xml | grep -E "<loc>|</loc>"
+
+# Verificar que páginas noindex no aparezcan
+curl -s http://127.0.0.1:4000/sitemap.xml | grep -v "/productos/" | grep -v "/servicios/"
+```
 
 ---
 
 **Última actualización:** 16 de julio de 2025  
-**Versión del sistema:** 1.0  
-**Archivo principal:** `_layouts/default.html`
+**Versión del sistema:** 1.1  
+**Archivos principales:** `_layouts/default.html`, `sitemap.xml`
