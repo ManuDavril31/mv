@@ -2,6 +2,7 @@
 layout: default
 title: "Acerca de MONTERIAVENDE"
 permalink: /acerca/
+noindex: true
 ---
 
 # Acerca de MONTERIAVENDE
