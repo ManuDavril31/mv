@@ -2,6 +2,7 @@
 layout: default
 title: "Mapa del sitio"
 permalink: /sitemap/
+noindex: true
 ---
 
 # 🗺️ Mapa del sitio

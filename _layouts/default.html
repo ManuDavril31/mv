@@ -13,7 +13,7 @@
     />
     <meta
       name="robots"
-      content="{% if page.noindex %}noindex, follow{% else %}index, follow{% endif %}"
+      content="{% if page.robots %}{{ page.robots }}{% elsif page.noindex %}noindex, follow{% else %}index, follow{% endif %}"
     />
     <meta
       property="og:title"
