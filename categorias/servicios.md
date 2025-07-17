@@ -3,6 +3,7 @@ layout: default
 title: "Servicios"
 permalink: /servicios/
 description: "Descubre todos nuestros servicios disponibles en Montería"
+noindex: true
 ---
 
 <!-- Hero Section para Categoría -->

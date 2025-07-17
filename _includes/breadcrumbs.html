@@ -8,12 +8,26 @@
         <a href="{{ site.baseurl }}/" class="breadcrumb-home">Inicio</a>
       </li>
 
-      {% if page.url != '/' %}
+      {% if page.url != '/' %} {% assign url_parts = page.url | split: '/' %} {%
+      assign current_path = '' %} {% for part in url_parts %} {% unless part ==
+      '' %} {% assign current_path = current_path | append: '/' | append: part
+      %} {% if forloop.last %}
       <li><span class="breadcrumb-separator">›</span></li>
       <li>
         <span class="current">{{ page.title }}</span>
       </li>
-      {% endif %}
+      {% else %}
+      <li><span class="breadcrumb-separator">›</span></li>
+      <li>
+        {% if part == 'servicios' %}
+        <a href="/servicios/">Servicios</a>
+        {% elsif part == 'productos' %}
+        <a href="/productos/">Productos</a>
+        {% else %}
+        <a href="{{ current_path }}/">{{ part | capitalize }}</a>
+        {% endif %}
+      </li>
+      {% endif %} {% endunless %} {% endfor %} {% endif %}
     </ol>
   </nav>
 </div>

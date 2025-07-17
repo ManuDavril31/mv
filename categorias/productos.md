@@ -3,6 +3,7 @@ layout: default
 title: "Productos"
 permalink: /productos/
 description: "Descubre todos nuestros productos disponibles en Montería"
+noindex: true
 ---
 
 <!-- Hero Section para Categoría -->

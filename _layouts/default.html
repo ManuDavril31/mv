@@ -11,7 +11,10 @@
       name="description"
       content="{% if page.meta %}{{ page.meta | strip_newlines }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.title }} - Compra y venta en Montería{% endif %}"
     />
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="robots"
+      content="{% if page.noindex %}noindex, follow{% else %}index, follow{% endif %}"
+    />
     <meta
       property="og:title"
       content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
