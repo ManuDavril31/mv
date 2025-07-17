@@ -37,7 +37,7 @@ layout: default
   
   <div class="productos-destacados">
     {% for post in site.posts limit: 6 %}
-      <div class="producto-card">
+      <a href="{{ post.url }}" class="producto-card">
         {% if post.descuento %}<span class="descuento">-{{ post.descuento }}%</span>{% endif %}
         {% if post.precio %}
           <span class="producto-precio-label">{{ post.precio | prepend: '$ ' | replace: '.00', '' }}</span>
@@ -56,21 +56,8 @@ layout: default
         <div class="producto-info">
           <div class="nombre">{{ post.card_title | default: post.title }}</div>
           <div class="descripcion">{{ post.card_description | default: post.excerpt | strip_html | truncate: 80 }}</div>
-          
-          {% if post.categories and post.categories.size > 0 %}
-            <div class="producto-categoria">
-              <span class="categoria-tag">{{ post.categories[0] | capitalize }}</span>
-            </div>
-          {% endif %}
-          
-          <a href="{{ post.url }}" class="btn-ver-mas">
-            <span>Ver más</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M7 17l10-10M17 7H7v10"/>
-            </svg>
-          </a>
         </div>
-      </div>
+      </a>
     {% endfor %}
   </div>
   
