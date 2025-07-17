@@ -2,9 +2,9 @@
 layout: post
 title: "Formato Único de Hoja de Vida"
 date: 2025-07-06
-categories: [formato, hoja de vida, monteria]
+categories: [servicios]
 meta: "Formato Único de Hoja de Vida: Aprende a descargar, llenar y optimizar este documento obligatorio en Colombia. Sigue esta guía 2025 para destacar en cualquier convocatoria laboral. En Colombia, el formato único de hoja de vida se ha convertido en un requisito esencial en procesos de selección tanto del sector público como privado. Este documento estandarizado busca garantizar transparencia y equidad en la evaluación de los candidatos. A continuación, encontrarás una guía exhaustiva y práctica para entender, completar y aprovechar al máximo este formato."
-permalink: /formato-unico-hoja-vida/
+permalink: /servicios/formato-unico-hoja-vida/
 card_title: "Formato Único de Hoja de Vida"
 card_description: "Te ayudamos a diligenciar el Formato Único de Hoja de Vida"
 card_image: /assets/posts/imgs/formato-unico-de-hoja-de-vida-persona-natural.jpg
