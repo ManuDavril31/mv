@@ -8,7 +8,7 @@ permalink: /formato-unico-hoja-vida/
 card_title: "Formato Único de Hoja de Vida"
 card_description: "Te ayudamos a diligenciar el Formato Único de Hoja de Vida"
 card_image: /assets/posts/imgs/formato-unico-de-hoja-de-vida-persona-natural.jpg
-precio: "10000"
+precio: "10.000"
 ---
 
 ## 📄 Formato Único de Hoja de Vida: Guía Completa para llenarla

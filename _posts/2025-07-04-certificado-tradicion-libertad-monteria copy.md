@@ -8,7 +8,7 @@ permalink: /certificado-tradicion-libertad-monteria/
 card_title: "Certificado de tradición y libertad | Montería"
 card_description: "Solicita el certificado de tradicion y libertad en Montería"
 card_image: /assets/posts/imgs/certificado-de-tradicion-y-libertad-en-monteria.jpg
-precio: "28000"
+precio: "28.000"
 ---
 
 ## 📄 Generar el Certificado de Tradición y Libertad Montería

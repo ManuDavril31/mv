@@ -40,7 +40,7 @@ layout: default
       <a href="{{ post.url }}" class="producto-card">
         {% if post.descuento %}<span class="descuento">-{{ post.descuento }}%</span>{% endif %}
         {% if post.precio %}
-          <span class="producto-precio-label">{{ post.precio | prepend: '$ ' | replace: '.00', '' }}</span>
+          <span class="producto-precio-label">{% assign precio_original = post.precio | append: '' %}{% assign precio_sin_ceros = precio_original | remove: '.00' %}{% if precio_original == precio_sin_ceros | append: '.00' %}{{ precio_sin_ceros | prepend: '$ ' }}{% else %}{{ precio_original | prepend: '$ ' }}{% endif %}</span>
         {% endif %}
         
         <div class="producto-image">
