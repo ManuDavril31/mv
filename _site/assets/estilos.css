@@ -504,33 +504,22 @@ main h1,
 
 /* Migas de pan (Breadcrumbs) */
 .breadcrumbs {
-  background: linear-gradient(90deg, #ffffff 0%, #f8f9fa 100%);
-  border: 2px solid #2b5876;
-  border-radius: 10px;
-  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   margin: 1.5rem auto 2rem auto;
   font-size: 0.95em;
-  box-shadow: 0 3px 10px rgba(43, 88, 118, 0.15);
+  box-shadow: none;
   max-width: 1000px;
   position: relative;
-}
-
-.breadcrumbs::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
-  border-radius: 10px 10px 0 0;
 }
 
 .breadcrumbs nav {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.8rem;
 }
 
 .breadcrumbs ol {
@@ -540,7 +529,7 @@ main h1,
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.8rem;
   width: 100%;
 }
 
@@ -559,37 +548,41 @@ main h1,
 .breadcrumbs a {
   color: #2b5876;
   text-decoration: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
   transition: all 0.3s ease;
-  font-weight: 600;
-  background: rgba(43, 88, 118, 0.05);
-  border: 1px solid rgba(43, 88, 118, 0.15);
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .breadcrumbs a:hover {
-  background: #2b5876;
-  color: #fff;
+  background: rgba(248, 250, 252, 0.8);
+  color: #1e40af;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(43, 88, 118, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #c7d2fe;
 }
 
 .breadcrumb-separator {
-  color: #2b5876;
-  margin: 0 0.3rem;
-  font-weight: bold;
-  font-size: 1.1em;
+  color: #64748b;
+  margin: 0 0.2rem;
+  font-weight: normal;
+  font-size: 1em;
   user-select: none;
 }
 
 .breadcrumbs .current {
-  color: #fff;
+  color: #1e40af;
   font-weight: 700;
-  padding: 0.4rem 0.8rem;
-  background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
-  border-radius: 6px;
-  border: 1px solid #2b5876;
-  box-shadow: 0 2px 6px rgba(43, 88, 118, 0.2);
+  padding: 0.6rem 1.2rem;
+  background: transparent;
+  border-radius: 25px;
+  border: 1px solid #e0e7ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .breadcrumb-home {
@@ -606,59 +599,56 @@ main h1,
 /* Responsive para móviles */
 @media (max-width: 768px) {
   .breadcrumbs {
-    padding: 0.8rem 1rem;
+    padding: 0;
     font-size: 0.9em;
     margin: 1rem auto 1.5rem auto;
     max-width: 95%;
   }
 
+  .breadcrumbs nav {
+    gap: 0.6rem;
+  }
+
   .breadcrumbs ol {
-    gap: 0.3rem;
+    gap: 0.6rem;
   }
 
   .breadcrumb-separator {
-    margin: 0 0.2rem;
-    font-size: 1em;
+    margin: 0 0.1rem;
+    font-size: 0.9em;
   }
 
   .breadcrumbs a,
   .breadcrumbs .current {
-    padding: 0.3rem 0.6rem;
+    padding: 0.5rem 1rem;
     font-size: 0.9em;
   }
 }
 
 @media (max-width: 480px) {
   .breadcrumbs {
-    padding: 0.6rem 0.8rem;
+    padding: 0;
     font-size: 0.85em;
     margin: 0.8rem auto 1.2rem auto;
   }
 
-  .breadcrumbs ol {
-    flex-direction: column;
-    align-items: flex-start;
+  .breadcrumbs nav {
     gap: 0.5rem;
   }
 
-  .breadcrumbs li {
-    width: 100%;
-  }
-
-  .breadcrumb-separator {
-    display: none;
+  .breadcrumbs ol {
+    gap: 0.5rem;
   }
 
   .breadcrumbs a,
   .breadcrumbs .current {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0.5rem 0.8rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85em;
   }
 
-  .breadcrumbs a {
-    background: rgba(43, 88, 118, 0.08);
+  .breadcrumb-separator {
+    margin: 0 0.1rem;
+    font-size: 0.8em;
   }
 }
 
@@ -1320,5 +1310,41 @@ time.dt-published {
 
   .producto-info {
     padding: 0.8rem;
+  }
+}
+
+/* Estilos para cuando no hay productos */
+.no-productos {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #3a3a3a;
+  border-radius: 15px;
+  margin: 2rem 0;
+  grid-column: 1 / -1;
+}
+
+.no-productos h3 {
+  color: #4da6ff;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+.no-productos p {
+  color: #ccc;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .no-productos {
+    padding: 2rem 1rem;
+  }
+
+  .no-productos h3 {
+    font-size: 1.3em;
+  }
+
+  .no-productos p {
+    font-size: 1em;
   }
 }

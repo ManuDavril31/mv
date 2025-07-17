@@ -1,46 +1,19 @@
-{% comment %} Generador de migas de pan (breadcrumbs) para Jekyll Detecta
-automáticamente el tipo de página y genera la navegación apropiada {% endcomment
-%} {% assign url_parts = page.url | split: '/' %} {% assign breadcrumb_path = ''
+{% comment %} Generador de migas de pan (breadcrumbs) para Jekyll {% endcomment
 %}
 
 <div class="breadcrumbs">
   <nav aria-label="Migas de pan">
     <ol>
-      <!-- Enlace a inicio -->
       <li>
         <a href="{{ site.baseurl }}/" class="breadcrumb-home">Inicio</a>
       </li>
 
       {% if page.url != '/' %}
       <li><span class="breadcrumb-separator">›</span></li>
-
-      {% if page.layout == 'post' %}
-      <!-- Para posts, solo mostrar el título del post -->
       <li>
         <span class="current">{{ page.title }}</span>
       </li>
-
-      {% else %}
-      <!-- Para páginas normales -->
-      {% for part in url_parts %} {% unless part == '' %} {% assign
-      breadcrumb_path = breadcrumb_path | append: '/' | append: part %} {% if
-      forloop.last %}
-      <!-- Página actual -->
-      <li>
-        <span class="current">
-          {% if page.title %} {{ page.title }} {% else %} {{ part | replace:
-          '-', ' ' | replace: '_', ' ' | capitalize }} {% endif %}
-        </span>
-      </li>
-      {% else %}
-      <!-- Páginas intermedias -->
-      <li>
-        <a href="{{ site.baseurl }}{{ breadcrumb_path }}/">
-          {{ part | replace: '-', ' ' | replace: '_', ' ' | capitalize }}
-        </a>
-      </li>
-      <li><span class="breadcrumb-separator">›</span></li>
-      {% endif %} {% endunless %} {% endfor %} {% endif %} {% endif %}
+      {% endif %}
     </ol>
   </nav>
 </div>
