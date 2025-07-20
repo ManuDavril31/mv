@@ -14,6 +14,38 @@ collections:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Configuración de seguridad
+safe: true
+lsi: false
+highlighter: rouge
+gist:
+  noscript: false
+
+# Excluir archivos sensibles del build
+exclude:
+  - .git/
+  - .github/
+  - .gitignore
+  - .jekyll-cache/
+  - .vscode/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - SECURITY.md
+  - ROBOTS.md
+  - BREADCRUMBS.md
+  - security-check.sh
+  - vendor/
+  - node_modules/
+  - .sass-cache/
+  - .env
+  - .env.local
+  - "*.log"
+  - "*.backup"
+  - "*.bak"
+  - "*.tmp"
 
 # Configuración de migas de pan
 breadcrumbs:

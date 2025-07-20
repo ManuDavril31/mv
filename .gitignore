@@ -1,0 +1,84 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Archivos sensibles y de configuración
+.env
+.env.local
+.env.production
+.env.development
+*.key
+*.pem
+*.p12
+*.pfx
+config.local.yml
+
+# Logs y archivos temporales
+*.log
+*.tmp
+*.temp
+*.backup
+*.bak
+*.old
+*.swp
+*.swo
+*~
+
+# Archivos del sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Node.js (si usas herramientas de build)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Ruby
+vendor/bundle/
+.bundle/
+Gemfile.lock
+
+# Archivos de backup automático
+*~
+.#*
+#*#
+
+# Archivos de sistema Linux/Mac
+.directory
+.fseventsd
+.TemporaryItems
+.apdisk
+
+# Archivos sensibles del proyecto
+admin/
+private/
+secret/
+credentials/
+
+# Archivos de testing
+coverage/
+.nyc_output/
+test-results/
+
+# Cachés diversos
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+dist/

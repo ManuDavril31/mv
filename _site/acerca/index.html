@@ -2,6 +2,37 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Security Headers -->
+    <!-- Security Headers para Jekyll -->
+<!-- Content Security Policy -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' *.google.com *.gstatic.com *.googleapis.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com; img-src 'self' data: *.google.com *.gstatic.com *.gravatar.com; font-src 'self' *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com; frame-src 'self' *.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+/>
+
+<!-- X-Frame-Options: Prevenir clickjacking -->
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+<!-- X-Content-Type-Options: Prevenir MIME type sniffing -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+<!-- Referrer Policy: Controlar información enviada en referrers -->
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+<!-- X-XSS-Protection: Activar protección XSS del navegador -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+<!-- Permissions Policy: Controlar APIs del navegador -->
+<meta
+  http-equiv="Permissions-Policy"
+  content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()"
+/>
+
+<!-- Strict-Transport-Security: Forzar HTTPS (solo si usas HTTPS) -->
+<!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"> -->
+
+
     <title>
       Acerca de MONTERIAVENDE | MONTERIAVENDE
     </title>
@@ -83,8 +114,8 @@
         <div class="nav-toggle-wrap">
           <button
             class="nav-toggle"
+            id="nav-toggle-btn"
             aria-label="Abrir menú"
-            onclick="document.querySelector('.main-nav ul').classList.toggle('open')"
           >
             <span></span><span></span><span></span>
           </button>
@@ -390,6 +421,36 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+
+      // Menú móvil toggle - Manejo seguro sin onclick inline
+      document.addEventListener("DOMContentLoaded", function () {
+        const navToggle = document.getElementById("nav-toggle-btn");
+        const navMenu = document.querySelector(".main-nav ul");
+
+        if (navToggle && navMenu) {
+          navToggle.addEventListener("click", function () {
+            navMenu.classList.toggle("open");
+          });
+
+          // Cerrar menú al hacer clic en un enlace
+          const navLinks = navMenu.querySelectorAll("a");
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              navMenu.classList.remove("open");
+            });
+          });
+
+          // Cerrar menú al hacer clic fuera
+          document.addEventListener("click", function (event) {
+            if (
+              !navToggle.contains(event.target) &&
+              !navMenu.contains(event.target)
+            ) {
+              navMenu.classList.remove("open");
+            }
+          });
+        }
       });
     </script>
   </body>

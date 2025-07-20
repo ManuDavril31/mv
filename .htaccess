@@ -1,0 +1,113 @@
+# Archivo .htaccess para seguridad de sitio Jekyll
+
+# Asegúrate de que tu servidor Apache tenga mod_headers habilitado
+
+# Forzar HTTPS (descomenta si tienes certificado SSL)
+
+# RewriteEngine On
+
+# RewriteCond %{HTTPS} !=on
+
+# RewriteRule ^(.\*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Headers de Seguridad
+
+<IfModule mod_headers.c>
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' *.google.com *.gstatic.com *.googleapis.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com; img-src 'self' data: *.google.com *.gstatic.com *.gravatar.com; font-src 'self' *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com; frame-src 'self' *.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+    
+    # X-Frame-Options: Prevenir clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # X-Content-Type-Options: Prevenir MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # X-XSS-Protection: Activar protección XSS del navegador
+    Header always set X-XSS-Protection "1; mode=block"
+    
+    # Referrer Policy: Controlar información enviada en referrers
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy: Controlar APIs del navegador
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()"
+    
+    # Strict-Transport-Security: Forzar HTTPS (solo si tienes HTTPS)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Cache Control para archivos estáticos
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+</IfModule>
+
+# Proteger archivos sensibles
+
+<FilesMatch "\.(yml|yaml|json|md|log|txt|bak|backup|old|tmp|temp)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Proteger directorios del sistema Jekyll
+
+RedirectMatch 404 /\.git
+RedirectMatch 404 /\.jekyll-cache
+RedirectMatch 404 /\_config\.yml
+RedirectMatch 404 /Gemfile
+RedirectMatch 404 /Gemfile\.lock
+RedirectMatch 404 /\.vscode
+RedirectMatch 404 /\.github
+
+# Proteger archivos de documentación del sistema
+
+<Files "ROBOTS.md">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "BREADCRUMBS.md">
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files "README.md">
+Order Allow,Deny
+Deny from all
+</Files>
+
+# Desactivar listado de directorios
+
+Options -Indexes
+
+# Desactivar server signature
+
+ServerTokens Prod
+ServerSignature Off
+
+# Protección contra ataques de fuerza bruta (básica)
+
+<RequireAll>
+    Require all granted
+    # Limitar intentos de acceso excesivos (requiere mod_limitipconn)
+    # LimitIPConn 10
+</RequireAll>
+
+# Prevenir acceso a archivos de backup
+
+<FilesMatch "~$">
+Order allow,deny
+Deny from all
+Satisfy All
+</FilesMatch>
+
+# Bloquear bots maliciosos comunes
+
+RewriteEngine On
+RewriteCond %{HTTP_USER_AGENT} (ahrefsbot|mj12bot|majestic|semrushbot|dotbot) [NC]
+RewriteRule .\* - [F,L]
+
+# Proteger contra hotlinking de imágenes
+
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?tudominio\.com [NC]
+RewriteRule \.(jpg|jpeg|png|gif|svg)$ - [F]

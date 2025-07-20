@@ -364,6 +364,9 @@ El sitemap (`sitemap.xml`) está sincronizado con el sistema de robots:
 - Páginas con `robots: "noindex, nofollow"`
 - Páginas con `sitemap: false`
 - Página 404
+- **Assets:** Archivos CSS, JS e imágenes (`/assets/`)
+- **Páginas de sistema:** `ROBOTS.md`, `BREADCRUMBS.md`, documentación técnica
+- **Sitemap duplicado:** El archivo sitemap.xml se excluye de sí mismo
 
 ### **Verificación:**
 
@@ -371,8 +374,14 @@ El sitemap (`sitemap.xml`) está sincronizado con el sistema de robots:
 # Ver el sitemap generado
 curl -s http://127.0.0.1:4000/sitemap.xml | grep -E "<loc>|</loc>"
 
-# Verificar que páginas noindex no aparezcan
+# Verificar que páginas noindex no aparezcan (categorias)
 curl -s http://127.0.0.1:4000/sitemap.xml | grep -v "/productos/" | grep -v "/servicios/"
+
+# Verificar que páginas de sistema no aparezcan
+curl -s http://127.0.0.1:4000/sitemap.xml | grep -v "ROBOTS" | grep -v "BREADCRUMBS"
+
+# Contar URLs en el sitemap
+curl -s http://127.0.0.1:4000/sitemap.xml | grep -c "<url>"
 ```
 
 ---

@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.jekyll-cache/
+Disallow: /.vscode/
+Disallow: /assets/main.css.map
+Disallow: /*?*
+Disallow: /search
+Disallow: /admin
+Disallow: /login
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /ROBOTS.html
+Disallow: /BREADCRUMBS.html
+
+# Bloquear bots maliciosos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: MajesticSEO
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Limitar frecuencia de rastreo para bots grandes
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 2
+
+# Sitemap
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml
