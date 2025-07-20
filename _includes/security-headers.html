@@ -1,0 +1,27 @@
+<!-- Security Headers para Jekyll -->
+<!-- Content Security Policy -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' *.google.com *.gstatic.com *.googleapis.com; style-src 'self' 'unsafe-inline' *.googleapis.com *.gstatic.com; img-src 'self' data: *.google.com *.gstatic.com *.gravatar.com; font-src 'self' *.googleapis.com *.gstatic.com; connect-src 'self' *.google-analytics.com; frame-src 'self' *.google.com; object-src 'none'; base-uri 'self'; form-action 'self';"
+/>
+
+<!-- X-Frame-Options: Prevenir clickjacking -->
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+
+<!-- X-Content-Type-Options: Prevenir MIME type sniffing -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+
+<!-- Referrer Policy: Controlar información enviada en referrers -->
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+
+<!-- X-XSS-Protection: Activar protección XSS del navegador -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+<!-- Permissions Policy: Controlar APIs del navegador -->
+<meta
+  http-equiv="Permissions-Policy"
+  content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), accelerometer=(), gyroscope=()"
+/>
+
+<!-- Strict-Transport-Security: Forzar HTTPS (solo si usas HTTPS) -->
+<!-- <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"> -->

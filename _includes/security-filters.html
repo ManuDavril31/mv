@@ -1,0 +1,24 @@
+<!-- Filtros de seguridad para contenido dinámico -->
+<!-- Usar en layouts y includes cuando muestres contenido del usuario -->
+
+<!-- Escapar HTML peligroso -->
+{% assign safe_content = include.content | strip_html | escape %}
+
+<!-- Filtrar caracteres peligrosos en URLs -->
+{% assign safe_url = include.url | uri_escape | replace: '<', '' | replace: '>',
+'' | replace: '"', '' %}
+
+<!-- Limpiar contenido de comentarios (si los tienes) -->
+{% assign safe_comment = include.comment | strip_html | truncate: 500 | escape
+%}
+
+<!-- Validar emails -->
+{% assign email_regex = site.email | strip %} {% if email_regex contains '@' and
+email_regex contains '.' %} {% assign safe_email = site.email | escape %} {%
+else %} {% assign safe_email = 'contacto@ejemplo.com' %} {% endif %}
+
+<!-- Validar URLs externas -->
+{% assign external_url = include.external_url %} {% if external_url contains
+'http://' or external_url contains 'https://' %} {% assign safe_external_url =
+external_url | escape %} {% else %} {% assign safe_external_url = '#' %} {%
+endif %}
